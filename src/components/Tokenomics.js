@@ -7,6 +7,14 @@ const epilepticAnimation = keyframes`
   100% { background-color: black; color: white; }
 `;
 
+const borderAnimation = keyframes`
+  0% { border-color: #00FF00; }
+  25% { border-color: #FF0000; }
+  50% { border-color: #00FF00; }
+  75% { border-color: #FF0000; }
+  100% { border-color: #00FF00; }
+`;
+
 const iframePsychedelicAnimation = keyframes`
   0% { filter: hue-rotate(0deg) brightness(1); }
   25% { filter: hue-rotate(90deg) brightness(1.2); }
@@ -20,12 +28,14 @@ const Tokenomics = () => {
     <Flex direction={{ base: 'column', md: 'row' }} width="100%">
       <Box
         flex="1"
-        bg="gray.900"
         p={4}
         display={{ base: 'none', md: 'flex' }}
         justifyContent="center"
         alignItems="center"
         height={{ base: '0', md: 'auto' }}
+        border="7px solid"
+        borderColor="#00FF00"
+        animation={`${borderAnimation} 0.5s infinite`}
       >
         <style>
           {`
