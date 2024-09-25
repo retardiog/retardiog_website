@@ -18,7 +18,7 @@ const TokenomicsMB = () => {
       animation={`${epilepticAnimation} 1s infinite`}
     >
       <Heading as="h1" size="lg" mb={6} fontFamily="'Comic Neue', cursive">
-        Tokenomics
+        Quasinomics
       </Heading>
       <Text fontSize="2xl" mb={4} fontFamily="'Comic Neue', cursive">
         Chain: ETH

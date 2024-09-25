@@ -80,8 +80,7 @@ const Tokenomics = () => {
         bgSize="contain"
       >
         <Heading as="h1" size="lg" mb={6}>
-          Tokenomics
-        </Heading>
+Quasinomics        </Heading>
         <Text fontSize="2xl" mb={4}>
           Chain: ETH
         </Text>
