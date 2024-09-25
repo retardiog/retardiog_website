@@ -24,7 +24,7 @@ const TokenomicsMB = () => {
         Chain: ETH
       </Text>
       <Text fontSize="2xl" mb={4} fontFamily="'Comic Neue', cursive">
-        Supply: 131213121312 $retardiog
+        Supply: 185,201,841,507 $retardiog
       </Text>
       <Text fontSize="2xl" mb={4} fontFamily="'Comic Neue', cursive">
         TAX: 0/0

@@ -76,7 +76,7 @@ const Tokenomics = () => {
           Chain: ETH
         </Text>
         <Text fontSize="2xl" mb={4}>
-          Supply: 131213121312 $retardiog
+          Supply: 185,201,841,507 $retardiog
         </Text>
         <Text fontSize="2xl" mb={4}>
           TAX: 0/0
