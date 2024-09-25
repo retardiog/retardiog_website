@@ -1,4 +1,3 @@
-// JoinCommunity.js
 import React from 'react';
 import { Box, Heading, Text, Image, VStack } from '@chakra-ui/react';
 
@@ -16,10 +15,10 @@ const JoinCommunity = () => {
       fontFamily="'Comic Neue', cursive"
       position="relative"
       style={{
-        backgroundImage: `url('/quasi3.png')`,
-        backgroundPosition: 'left',
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: 'contain',
+        backgroundImage: `url('/quasi3.png'), url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50'><text y='35' font-size='35' fill='rgba(255, 255, 255, 0.12)'>🦴</text></svg>")`,
+        backgroundPosition: 'left, 0 0',
+        backgroundRepeat: 'no-repeat, repeat',
+        backgroundSize: 'contain, 50px 50px',
       }}
     >
       <VStack spacing={6}>
