@@ -1,40 +1,58 @@
-import { Box, Heading, Text, keyframes } from '@chakra-ui/react';
+import { Box, Text, Button } from '@chakra-ui/react';
 import React from 'react';
-
-const epilepticAnimation = keyframes`
-  0% { background-color: black; color: white; }
-  50% { background-color: white; color: black; }
-  100% { background-color: black; color: white; }
-`;
 
 const TokenomicsMB = () => {
   return (
     <Box
-      p={8}
-      display="flex"
-      flexDirection="column"
-      justifyContent="center"
-      alignItems="center"
-      animation={`${epilepticAnimation} 1s infinite`}
+      width="400px"
+      height="300px"
+      border="2px solid #000080"
+      borderRadius="5px"
+      backgroundColor="#c0c0c0"
+      boxShadow="5px 5px 0px #000"
+      position="relative"
+      overflow="hidden"
     >
-      <Heading as="h1" size="lg" mb={6} fontFamily="'Comic Neue', cursive">
-        Quasinomics
-      </Heading>
-      <Text fontSize="2xl" mb={4} fontFamily="'Comic Neue', cursive">
-        Chain: ETH
-      </Text>
-      <Text fontSize="2xl" mb={4} fontFamily="'Comic Neue', cursive">
-        Supply: 185,201,841,507 $retardiog
-      </Text>
-      <Text fontSize="2xl" mb={4} fontFamily="'Comic Neue', cursive">
-        TAX: 0/0
-      </Text>
-      <Text fontSize="2xl" mb={4} fontFamily="'Comic Neue', cursive">
-        Ownership: Renounced
-      </Text>
-      <Text fontSize="2xl" fontFamily="'Comic Neue', cursive">
-        Liquidity: Burned
-      </Text>
+      <Box
+        width="100%"
+        backgroundColor="#000080"
+        padding="5px"
+        borderRadius="5px 5px 0 0"
+        display="flex"
+        justifyContent="space-between"
+        alignItems="center"
+      >
+        <Text size="sm" color="white" fontFamily="'MS Sans Serif', sans-serif">
+          Quasinomics
+        </Text>
+        <Button
+          size="xs"
+          backgroundColor="#c0c0c0"
+          color="#000080"
+          border="1px solid #000080"
+          borderRadius="3px"
+          _hover={{ backgroundColor: "#000080", color: "white" }}
+        >
+          _
+        </Button>
+      </Box>
+      <Box padding="10px" overflowY="auto" height="calc(100% - 40px)">
+        <Text fontSize="lg" mb={2} fontFamily="'MS Sans Serif', sans-serif">
+          Chain: ETH
+        </Text>
+        <Text fontSize="lg" mb={2} fontFamily="'MS Sans Serif', sans-serif">
+          Supply: 185,201,841,507 $retardiog
+        </Text>
+        <Text fontSize="lg" mb={2} fontFamily="'MS Sans Serif', sans-serif">
+          TAX: 0/0
+        </Text>
+        <Text fontSize="lg" mb={2} fontFamily="'MS Sans Serif', sans-serif">
+          Ownership: Renounced
+        </Text>
+        <Text fontSize="lg" fontFamily="'MS Sans Serif', sans-serif">
+          Liquidity: Burned
+        </Text>
+      </Box>
     </Box>
   );
 };
