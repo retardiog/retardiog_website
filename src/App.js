@@ -4,6 +4,7 @@ import FullScreenVideo from './components/FullScreenVideo';
 import BoldMessage from './components/BoldMessage';
 import Tokenomics from './components/Tokenomics';
 import TokenomicsMB from './components/TokenomicsMB'; 
+import Chart from './components/Chart'; // Asegúrate de que la ruta sea correcta
 import JoinCommunity from './components/JoinCommunity';
 import EntranceModal from './components/EntranceModal';
 import FooterCarousel from './components/FooterCarousel';
@@ -28,7 +29,7 @@ function App() {
     setIsVideoWithSound((prev) => !prev);
   };
 
-  const [isMobile] = useMediaQuery("(max-width: 48em");
+  const [isMobile] = useMediaQuery("(max-width: 48em)");
 
   return (
     <div className="App">
@@ -39,7 +40,14 @@ function App() {
           <Menu toggleMute={toggleMute} isMuted={!isVideoWithSound} />
           <FullScreenVideo playWithSound={isVideoWithSound} />
           <BoldMessage />
-          {isMobile ? <TokenomicsMB /> : <Tokenomics />}
+          {isMobile ? (
+            <>
+              <Chart />
+              <TokenomicsMB />
+            </>
+          ) : (
+            <Tokenomics />
+          )}
           <JoinCommunity />
           <FooterCarousel />
         </>
