@@ -36,7 +36,7 @@ const EntranceModal = ({ onEnter, onExit }) => {
         top: `${Math.random() * 100}%`,
         left: `${Math.random() * 100}%`,
         opacity: Math.random(),
-        image: images[Math.floor(Math.random() * images.length)], 
+        image: images[Math.floor(Math.random() * images.length)],
       }));
       setGifElements(newGifs);
     };
@@ -69,59 +69,68 @@ const EntranceModal = ({ onEnter, onExit }) => {
         {gifElements.map((position, index) => (
           <Image
             key={index}
-            src={position.image} 
-            alt="Dancing Image"
+            src={position.image}
+            alt=""
             position="absolute"
             top={position.top}
             left={position.left}
-            boxSize={`${Math.random() * 150 + 150}px`} 
+            boxSize={{ base: '100px', md: `${Math.random() * 150 + 150}px` }} 
             opacity={position.opacity}
             style={{ pointerEvents: 'none' }}
           />
         ))}
-        <ModalHeader textAlign="center" mt={15}>
-          Welcome to <span style={{ fontWeight: 'bold', fontSize: '8xl' }}>$retardiog</span>
-        </ModalHeader>
-
-        <ModalBody>
-          <Flex direction="column" justify="center" align="center" pb={10} textAlign="center">
+        <Flex
+          direction="column"
+          justify="center"
+          align="center"
+          position="absolute"
+          top="0"
+          left="0"
+          right="0"
+          bottom="0"
+          zIndex={2}
+          textAlign="center"
+        >
+          <ModalHeader mt={15}>
+            Welcome to <span style={{ fontWeight: 'bold', fontSize: '8xl' }}>$retardiog</span>
+          </ModalHeader>
+          <ModalBody pb={10}>
             <Image
               src="/quasi.png"
               alt="Community Image"
               boxSize="250px" 
               mb={8}
-              pb={10}
             />
             <Text>
               Du yu want to esperience da website with soundd or without soundddd?
             </Text>
-          </Flex>
-        </ModalBody>
-        <ModalFooter justifyContent="center" zIndex={1}>
-          <Button
-            colorScheme="teal"
-            mr={3}
-            onClick={handleEnter}
-            size="lg"
-            leftIcon={<FaVolumeUp />}
-            zIndex={2}
-            _hover={{ transform: 'scale(1.1)', cursor: 'pointer' }}
-            transition="transform 0.2s"
-          >
-            I am Retarded (With Sound)
-          </Button>
-          <Button
-            variant="ghost"
-            onClick={handleExit}
-            size="lg"
-            leftIcon={<FaVolumeMute />}
-            zIndex={2}
-            _hover={{ transform: 'scale(1.1)', cursor: 'pointer' }}
-            transition="transform 0.2s"
-          >
-            I'm a Jeet (Muted)
-          </Button>
-        </ModalFooter>
+          </ModalBody>
+          <ModalFooter justifyContent="center" zIndex={2}>
+            <Button
+              colorScheme="teal"
+              mr={3}
+              onClick={handleEnter}
+              size="lg"
+              leftIcon={<FaVolumeUp />}
+              zIndex={2}
+              _hover={{ transform: 'scale(1.1)', cursor: 'pointer' }}
+              transition="transform 0.2s"
+            >
+              I am Retarded (With Sound)
+            </Button>
+            <Button
+              variant="ghost"
+              onClick={handleExit}
+              size="lg"
+              leftIcon={<FaVolumeMute />}
+              zIndex={2}
+              _hover={{ transform: 'scale(1.1)', cursor: 'pointer' }}
+              transition="transform 0.2s"
+            >
+              I'm a Jeet (Muted)
+            </Button>
+          </ModalFooter>
+        </Flex>
       </ModalContent>
     </Modal>
   );
