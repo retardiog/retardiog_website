@@ -36,7 +36,7 @@ const JoinCommunity = () => {
           cursor="pointer"
           mb={5}
           pb={5}
-          onClick={() => window.open('https://t.me/your_telegram_group', '_blank')}
+          onClick={() => window.open('https://t.me/retardiog', '_blank')}
         />
       </VStack>
     </Box>

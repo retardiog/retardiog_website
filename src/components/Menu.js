@@ -48,14 +48,17 @@ const Menu = ({ toggleMute, isMuted }) => {
           <Button onClick={toggleMute} colorScheme="teal">
             {isMuted ? 'Unmute' : 'Mute'}
           </Button>
-          <Link href="#" fontWeight="medium" fontSize="lg" fontFamily="Arial" _hover={{ color: "teal.300" }}>
+          <Link href="https://x.com/retardiog_eth" fontWeight="medium" fontSize="lg" fontFamily="Arial" _hover={{ color: "teal.300" }} target="_blank" rel="noopener noreferrer">
             X
           </Link>
-          <Link href="#" fontWeight="medium" fontSize="md" fontFamily="Courier New" _hover={{ color: "teal.300" }}>
+          <Link href="https://t.me/retardiog" fontWeight="medium" fontSize="md" fontFamily="Courier New" _hover={{ color: "teal.300" }} target="_blank" rel="noopener noreferrer">
             TG
           </Link>
-          <Link href="#" fontWeight="medium" fontSize="sm" fontFamily="Georgia" _hover={{ color: "teal.300" }}>
+          <Link href="#" fontWeight="medium" fontSize="sm" fontFamily="Georgia" _hover={{ color: "teal.300" }} target="_blank" rel="noopener noreferrer">
             DEXS
+          </Link>
+          <Link href="https://github.com/retardiog/retardiog_website" fontWeight="medium" fontSize="sm" fontFamily="Georgia" _hover={{ color: "teal.300" }} target="_blank" rel="noopener noreferrer">
+            GitHub
           </Link>
         </HStack>
       </Flex>
