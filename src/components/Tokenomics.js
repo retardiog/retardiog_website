@@ -1,29 +1,13 @@
-import { Box, Heading, Text, Flex, keyframes } from '@chakra-ui/react';
-import React from 'react';
-
-const epilepticAnimation = keyframes`
-  0% { background-color: black; color: white; }
-  50% { background-color: white; color: black; }
-  100% { background-color: black; color: white; }
-`;
-
-const borderAnimation = keyframes`
-  0% { border-color: #00FF00; }
-  25% { border-color: #FF0000; }
-  50% { border-color: #00FF00; }
-  75% { border-color: #FF0000; }
-  100% { border-color: #00FF00; }
-`;
-
-const iframePsychedelicAnimation = keyframes`
-  0% { filter: hue-rotate(0deg) brightness(1); }
-  25% { filter: hue-rotate(90deg) brightness(1.2); }
-  50% { filter: hue-rotate(180deg) brightness(1.5); }
-  75% { filter: hue-rotate(270deg) brightness(1.2); }
-  100% { filter: hue-rotate(360deg) brightness(1); }
-`;
+import { Box, Text, Flex, Button } from '@chakra-ui/react';
+import React, { useState } from 'react';
 
 const Tokenomics = () => {
+  const [isClosed, setIsClosed] = useState(false);
+
+  const handleClose = () => {
+    setIsClosed(true);
+  };
+
   return (
     <Flex direction={{ base: 'column', md: 'row' }} width="100%">
       <Box
@@ -35,67 +19,78 @@ const Tokenomics = () => {
         height={{ base: '0', md: 'auto' }}
         border="7px solid"
         borderColor="#00FF00"
-        animation={`${borderAnimation} 0.5s infinite`}
       >
-        <style>
-          {`
-            #dexscreener-embed {
-              position: relative;
-              width: 100%;
-              padding-bottom: 56.25%;
-            }
-            #dexscreener-embed iframe {
-              position: absolute;
-              width: 100%;
-              height: 100%;
-              top: 0;
-              left: 0;
-              border: 0;
-              animation: ${iframePsychedelicAnimation} 5s infinite;
-            }
-          `}
-        </style>
         <div id="dexscreener-embed">
           <iframe
             src="https://dexscreener.com/ethereum/0xE7b4e528308c84FD6698906b6224615E9e30d236?embed=1&theme=dark&trades=0&info=0"
             allowFullScreen
             title="DexScreener Chart"
+            style={{ width: '100%', height: '50vh', border: '0' }}
           ></iframe>
         </div>
       </Box>
 
       <Box
         flex="1"
-        p={8}
+        p={0} // Cambia el padding a 0 para que no afecte el diseño
         display="flex"
         flexDirection="column"
-        justifyContent="center"
+        justifyContent="flex-start" // Cambia a flex-start para que el contenido empiece desde arriba
         alignItems="center"
-        animation={`${epilepticAnimation} 1s infinite`}
-        fontFamily="Comic Sans MS"
         position="relative"
-        bgImage="url('/quasi2.png')"
-        bgPosition="bottom right"
-        bgRepeat="no-repeat"
-        bgSize="contain"
+        border="2px solid #000080"
+        borderRadius="5px"
+        backgroundColor="#c0c0c0"
+        boxShadow="5px 5px 0px #000"
       >
-        <Heading as="h1" size="lg" mb={6}>
-Quasinomics        </Heading>
-        <Text fontSize="2xl" mb={4}>
-          Chain: ETH
-        </Text>
-        <Text fontSize="2xl" mb={4}>
-          Supply: 185,201,841,507 $retardiog
-        </Text>
-        <Text fontSize="2xl" mb={4}>
-          TAX: 0/0
-        </Text>
-        <Text fontSize="2xl" mb={4}>
-          Ownership: Renounced
-        </Text>
-        <Text fontSize="2xl">
-          Liquidity: Burned
-        </Text>
+        <Box
+          width="100%"
+          backgroundColor="#000080"
+          padding="5px"
+          borderRadius="5px 5px 0 0"
+          display="flex"
+          justifyContent="space-between"
+          alignItems="center"
+          position="absolute" // Añade posición absoluta
+          top="0" // Coloca en la parte superior
+        >
+          <Text size="sm" color="white" fontFamily="'MS Sans Serif', sans-serif">
+            Quasinomics
+          </Text>
+          <Button
+            size="xs"
+            backgroundColor="#c0c0c0"
+            color="#000080"
+            border="1px solid #000080"
+            borderRadius="3px"
+            onClick={handleClose}
+            _hover={{ backgroundColor: "#000080", color: "white" }}
+          >
+            X
+          </Button>
+        </Box>
+        <Box padding="30px 10px 10px" marginTop="30px"> {/* Ajusta el padding para el contenido */}
+          <Text fontSize="lg" mb={2} fontFamily="'MS Sans Serif', sans-serif">
+            Chain: ETH
+          </Text>
+          <Text fontSize="lg" mb={2} fontFamily="'MS Sans Serif', sans-serif">
+            Supply: 185,201,841,507 $retardiog
+          </Text>
+          <Text fontSize="lg" mb={2} fontFamily="'MS Sans Serif', sans-serif">
+            TAX: 0/0
+          </Text>
+          <Text fontSize="lg" mb={2} fontFamily="'MS Sans Serif', sans-serif">
+            Ownership: Renounced
+          </Text>
+          <Text fontSize="lg" fontFamily="'MS Sans Serif', sans-serif">
+            Liquidity: Burned
+          </Text>
+        </Box>
+        {isClosed && (
+          <Text fontSize="xl" color="#ff0000" mt={4} fontFamily="'MS Sans Serif', sans-serif">
+            YOU ARE RETARDIOED!
+          </Text>
+        )}
       </Box>
     </Flex>
   );
