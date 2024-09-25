@@ -31,6 +31,7 @@ const phrases = [
   "Is this a Cabal?",
   "Alpha?",
   "Fuck HANA, MISHA and CO",
+  "RAID MFERS",
   "Slow cooking",
   "Quasi Modo Next SHIB",
   "F**K ALL THOSE CUTE DOGS! FTC",
