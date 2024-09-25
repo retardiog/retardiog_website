@@ -22,8 +22,8 @@ const gifAnimation = keyframes`
 `;
 
 const FullScreenVideo = ({ playWithSound }) => {
-  const [gifVisible, setGifVisible] = useState(Array(10).fill(true));
-  const [positions, setPositions] = useState(Array.from({ length: 10 }, () => ({
+  const [gifVisible, setGifVisible] = useState(Array(20).fill(true));
+  const [positions, setPositions] = useState(Array.from({ length: 20 }, () => ({
     top: `${Math.random() * 100}%`,
     left: `${Math.random() * 100}%`,
   })));
@@ -57,7 +57,7 @@ const FullScreenVideo = ({ playWithSound }) => {
     return () => clearInterval(interval);
   }, []);
 
-  const gifSources = ['/quasi.png', '/quasi2.png', '/quasi3.png'];
+  const gifSources = ['/quasi.png', '/quasi2.png', '/quasi3.png', '/quasi4.png'];
 
   return (
     <Box
@@ -84,9 +84,22 @@ const FullScreenVideo = ({ playWithSound }) => {
           zIndex: '0',
         }}
       >
-        <source src="/retardiog2.mp4" type="video/mp4" />
+        <source src="/retardiog3.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
+
+      {/* Overlay del GIF con opacidad */}
+      <Box
+        position="absolute"
+        top={0}
+        left={0}
+        width="100%"
+        height="100%"
+        backgroundImage="url('/psycho2.gif')"
+        backgroundSize="cover"
+        opacity={0.18}
+        zIndex="1"
+      />
 
       <Box
         position="absolute"
@@ -102,23 +115,25 @@ const FullScreenVideo = ({ playWithSound }) => {
               key={index}
               src={gifSources[index % gifSources.length]}
               alt="Dancing Image"
-              className="danciing-gif"
+              className="dancing-gif"
               style={{
-                width: `${Math.random() * 200 + 100}px`,
+                width: `${Math.random() * 600 + 100}px`, // Tamaño aleatorio entre 100px y 700px
                 height: 'auto',
                 position: 'absolute',
                 top: position.top,
                 left: position.left,
                 animation: `${gifAnimation} 1s infinite`,
+                transform: `rotate(${Math.random() * 10 - 5}deg)` // Rotación aleatoria entre -5 y 5 grados
               }}
             />
           )
         ))}
       </Box>
+
       <Heading
         fontSize={{ base: '4xl', md: '10xl' }}
         textAlign="center"
-        zIndex="1"
+        zIndex="2"
         bg="rgba(0, 0, 0, 0.5)"
         p={4}
         borderRadius="md"
@@ -130,7 +145,7 @@ const FullScreenVideo = ({ playWithSound }) => {
       <Heading
         fontSize={{ base: '4xl', md: '10xl' }}
         textAlign="center"
-        zIndex="1"
+        zIndex="2"
         bg="rgba(0, 0, 0, 0.5)"
         p={4}
         borderRadius="md"
@@ -142,7 +157,7 @@ const FullScreenVideo = ({ playWithSound }) => {
       <Text
         fontSize={{ base: '10px', md: '8xl' }}
         textAlign="center"
-        zIndex="1"
+        zIndex="2"
         color={'white'}
         bg="rgba(0, 0, 0, 0.5)"
         p={4}
@@ -151,7 +166,7 @@ const FullScreenVideo = ({ playWithSound }) => {
       >
         CA: 0xXXXX
       </Text>
-      <Button onClick={copyCA} colorScheme="teal" mt={4} zIndex="1">
+      <Button onClick={copyCA} colorScheme="teal" mt={4} zIndex="2">
         Copy CA
       </Button>
     </Box>
