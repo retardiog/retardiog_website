@@ -32,6 +32,7 @@ const phrases = [
   "Alpha?",
   "Fuck HANA, MISHA and CO",
   "Slow cooking",
+  "Quasi Modo Next SHIB",
   "F**K ALL THOSE CUTE DOGS! FTC",
   "Where is dev?",
   "Trenches Sucks",
