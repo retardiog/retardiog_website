@@ -35,9 +35,7 @@ const FullScreenVideo = ({ playWithSound }) => {
 
   useEffect(() => {
     const toggleVisibility = () => {
-      setGifVisible((prev) =>
-        prev.map(() => Math.random() > 0.5)
-      );
+      setGifVisible((prev) => prev.map(() => Math.random() > 0.5));
     };
 
     const moveGifs = () => {
@@ -88,7 +86,6 @@ const FullScreenVideo = ({ playWithSound }) => {
         Your browser does not support the video tag.
       </video>
 
-      {/* Overlay del GIF con opacidad */}
       <Box
         position="absolute"
         top={0}
@@ -114,16 +111,16 @@ const FullScreenVideo = ({ playWithSound }) => {
             <img
               key={index}
               src={gifSources[index % gifSources.length]}
-              alt="Dancing Image"
+              alt=""
               className="dancing-gif"
               style={{
-                width: `${Math.random() * 600 + 100}px`, // Tamaño aleatorio entre 100px y 700px
+                width: `${Math.random() * (window.innerWidth < 768 ? 200 : 600) + 100}px`,
                 height: 'auto',
                 position: 'absolute',
                 top: position.top,
                 left: position.left,
                 animation: `${gifAnimation} 1s infinite`,
-                transform: `rotate(${Math.random() * 10 - 5}deg)` // Rotación aleatoria entre -5 y 5 grados
+                transform: `rotate(${Math.random() * 10 - 5}deg)`
               }}
             />
           )
