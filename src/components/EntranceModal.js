@@ -32,7 +32,7 @@ const EntranceModal = ({ onEnter, onExit }) => {
 
   useEffect(() => {
     const generateGifs = () => {
-      const newGifs = Array.from({ length: 20 }).map(() => ({
+      const newGifs = Array.from({ length: 10 }).map(() => ({
         top: `${Math.random() * 100}%`,
         left: `${Math.random() * 100}%`,
         opacity: Math.random(),
@@ -74,7 +74,7 @@ const EntranceModal = ({ onEnter, onExit }) => {
             position="absolute"
             top={position.top}
             left={position.left}
-            boxSize={{ base: '100px', md: `${Math.random() * 150 + 150}px` }} 
+            boxSize={{ base: '50px', md: `${Math.random() * 150 + 150}px` }} 
             opacity={position.opacity}
             style={{ pointerEvents: 'none' }}
           />
