@@ -42,3 +42,28 @@
     transform: rotate(360deg);
   }
 }
+
+
+.custom-heading {
+  font-size: 6rem; 
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 16px;
+  border-radius: 8px; 
+  font-family: 'Comic Neue', cursive; 
+  animation: psychedelic 2s infinite linear;
+}
+
+@keyframes psychedelic {
+  0% { color: #ff00ff; }
+  10% { color: #ff0000; }
+  20% { color: #00ff00; }
+  30% { color: #0000ff; }
+  40% { color: #ffff00; }
+  50% { color: #00ffff; }
+  60% { color: #ff00ff; }
+  70% { color: #ff6600; }
+  80% { color: #6600ff; }
+  90% { color: #00ff66; }
+  100% { color: #ff00ff; }
+}

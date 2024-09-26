@@ -3,9 +3,19 @@ import React, { useState } from 'react';
 
 const Tokenomics = () => {
   const [isClosed, setIsClosed] = useState(false);
+  const [messages, setMessages] = useState([]);
 
   const handleClose = () => {
-    setIsClosed(true);
+    if (messages.length < 3) {
+      const newMessages = [
+        "OMG, you won't hack me, will you?",
+        "What do you expect to happen?",
+        "Are you a hacker in disguise?"
+      ];
+      setMessages((prevMessages) => [...prevMessages, newMessages[messages.length]]);
+    } else {
+      setIsClosed(true);
+    }
   };
 
   return (
@@ -32,44 +42,42 @@ const Tokenomics = () => {
 
       <Box
         flex="1"
-        p={0} // Cambia el padding a 0 para que no afecte el diseño
+        p={0}
         display="flex"
         flexDirection="column"
-        justifyContent="flex-start" // Cambia a flex-start para que el contenido empiece desde arriba
+        justifyContent="flex-start"
         alignItems="center"
         position="relative"
         border="2px solid #000080"
-        borderRadius="5px"
         backgroundColor="#c0c0c0"
         boxShadow="5px 5px 0px #000"
       >
         <Box
           width="100%"
           backgroundColor="#000080"
-          padding="5px"
-          borderRadius="5px 5px 0 0"
+          padding="0px"
           display="flex"
           justifyContent="space-between"
           alignItems="center"
-          position="absolute" // Añade posición absoluta
-          top="0" // Coloca en la parte superior
+          position="absolute"
+          top="0"
         >
-          <Text size="sm" color="white" fontFamily="'MS Sans Serif', sans-serif">
+          <Text size="sm" ml={12} color="white" fontFamily="'MS Sans Serif', sans-serif">
             Quasinomics
           </Text>
           <Button
+          mr={12}
             size="xs"
             backgroundColor="#c0c0c0"
             color="#000080"
             border="1px solid #000080"
-            borderRadius="3px"
             onClick={handleClose}
             _hover={{ backgroundColor: "#000080", color: "white" }}
           >
             X
           </Button>
         </Box>
-        <Box padding="30px 10px 10px" marginTop="30px"> {/* Ajusta el padding para el contenido */}
+        <Box padding="30px 10px 10px" marginTop="30px">
           <Text fontSize="lg" mb={2} fontFamily="'MS Sans Serif', sans-serif">
             Chain: ETH
           </Text>
@@ -86,9 +94,14 @@ const Tokenomics = () => {
             Liquidity: Burned
           </Text>
         </Box>
+        {messages.map((msg, index) => (
+          <Text key={index} fontSize="xl" color="#ff0000" mt={4} fontFamily="'MS Sans Serif', sans-serif">
+            {msg}
+          </Text>
+        ))}
         {isClosed && (
           <Text fontSize="xl" color="#ff0000" mt={4} fontFamily="'MS Sans Serif', sans-serif">
-            YOU ARE RETARDIOED!
+            YOU ARE RETARDIOGED!
           </Text>
         )}
       </Box>

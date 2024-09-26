@@ -1,4 +1,4 @@
-import { Box, Heading, keyframes, Text, Button } from '@chakra-ui/react';
+import { Box, Text, keyframes, Button } from '@chakra-ui/react';
 import React, { useEffect, useState } from 'react';
 
 const psychedelicAnimation = keyframes`
@@ -106,16 +106,15 @@ const FullScreenVideo = ({ playWithSound }) => {
         height="100%"
         zIndex="0"
       >
-        {positions.map((position, index) => {
-          const isMobile = window.innerWidth < 768; // Check if in mobile view
-          return gifVisible[index] && (isMobile ? index < 2 : true) && ( // Show 2 GIFs in mobile
+        {positions.map((position, index) => (
+          gifVisible[index] && (
             <img
               key={index}
               src={gifSources[index % gifSources.length]}
               alt=""
               className="dancing-gif"
               style={{
-                width: `${Math.random() * (isMobile ? 100 : 600) + 100}px`, // Smaller GIFs in mobile
+                width: `${Math.random() * (window.innerWidth < 768 ? 200 : 600) + 100}px`,
                 height: 'auto',
                 position: 'absolute',
                 top: position.top,
@@ -124,34 +123,34 @@ const FullScreenVideo = ({ playWithSound }) => {
                 transform: `rotate(${Math.random() * 10 - 5}deg)`
               }}
             />
-          );
-        })}
+          )
+        ))}
       </Box>
 
-      <Heading
-        fontSize={{ base: '4xl', md: '10xl' }}
-        textAlign="center"
+      <Text
+  fontSize="60px"
+          textAlign="center"
         zIndex="2"
         bg="rgba(0, 0, 0, 0.5)"
-        p={4}
+        p={1}
         borderRadius="md"
         animation={`${psychedelicAnimation} 2s infinite linear`}
         fontFamily="'Comic Neue', cursive"
       >
         Meet Quasi Modo
-      </Heading>
-      <Heading
-        fontSize={{ base: '4xl', md: '10xl' }}
+      </Text>
+      <Text
+        fontSize="40px"
         textAlign="center"
         zIndex="2"
         bg="rgba(0, 0, 0, 0.5)"
-        p={4}
+        p={1}
         borderRadius="md"
         animation={`${psychedelicAnimation} 2s infinite linear`}
         fontFamily="'Comic Neue', cursive"
       >
         study $retardiog
-      </Heading>
+      </Text>
       <Text
         fontSize={{ base: '10px', md: '8xl' }}
         textAlign="center"
