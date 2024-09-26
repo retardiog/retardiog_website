@@ -106,15 +106,16 @@ const FullScreenVideo = ({ playWithSound }) => {
         height="100%"
         zIndex="0"
       >
-        {positions.map((position, index) => (
-          gifVisible[index] && (
+        {positions.map((position, index) => {
+          const isMobile = window.innerWidth < 768; // Check if in mobile view
+          return gifVisible[index] && (isMobile ? index < 2 : true) && ( // Show 2 GIFs in mobile
             <img
               key={index}
               src={gifSources[index % gifSources.length]}
               alt=""
               className="dancing-gif"
               style={{
-                width: `${Math.random() * (window.innerWidth < 768 ? 200 : 600) + 100}px`,
+                width: `${Math.random() * (isMobile ? 100 : 600) + 100}px`, // Smaller GIFs in mobile
                 height: 'auto',
                 position: 'absolute',
                 top: position.top,
@@ -123,8 +124,8 @@ const FullScreenVideo = ({ playWithSound }) => {
                 transform: `rotate(${Math.random() * 10 - 5}deg)`
               }}
             />
-          )
-        ))}
+          );
+        })}
       </Box>
 
       <Heading
