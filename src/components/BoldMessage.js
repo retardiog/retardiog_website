@@ -37,6 +37,8 @@ const phrases = [
   "F**K ALL THOSE CUTE DOGS! FTC",
   "Where is dev?",
   "Trenches Sucks",
+  "OMG, why does the domain end with .vercel.com?",
+  "Retarded Devs",
   "CTO?",
   "the ticker is $retardiog",
   "When DEXS update?",
