@@ -24,7 +24,7 @@ const TokenomicsMB = () => {
 
   return (
     <Box
-      width="400px"
+      width="100%"
       height="300px"
       border="2px solid #000080"
       backgroundColor="#c0c0c0"
@@ -34,7 +34,7 @@ const TokenomicsMB = () => {
       pb={8}
     >
       <Box
-        width="auto"
+        width="100%"
         backgroundColor="#000080"
         padding="0px"
         display="flex"
