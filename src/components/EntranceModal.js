@@ -76,7 +76,7 @@ const EntranceModal = ({ onEnter, onExit }) => {
             left={position.left}
             boxSize={{ base: '50px', md: `${Math.random() * 150 + 150}px` }} 
             opacity={position.opacity}
-            style={{ pointerEvents: 'none', display: (index === 5 ? 'none' : 'block') }} // Oculta el GIF central
+            style={{ pointerEvents: 'none', display: (index === 5 ? 'none' : 'block') }}
           />
         ))}
         <Flex

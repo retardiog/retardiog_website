@@ -137,7 +137,7 @@ const FullScreenVideo = ({ playWithSound }) => {
         animation={`${psychedelicAnimation} 2s infinite linear`}
         fontFamily="'Comic Neue', cursive"
       >
-        Meet Quasi Modo
+        Meet Quasimodo
       </Text>
       <Text
         fontSize="40px"
