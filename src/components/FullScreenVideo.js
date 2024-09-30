@@ -30,7 +30,7 @@ const FullScreenVideo = ({ playWithSound }) => {
 
   const copyCA = () => {
     navigator.clipboard.writeText('0xXXXXX');
-    alert('CA copied, go check it out on DexScreener retardioged!');
+    alert('CA copied, go check it out on DexScreener barkinged!');
   };
 
   useEffect(() => {
@@ -82,7 +82,7 @@ const FullScreenVideo = ({ playWithSound }) => {
           zIndex: '0',
         }}
       >
-        <source src="/retardiog3.mp4" type="video/mp4" />
+        <source src="/barking3.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 
@@ -149,7 +149,7 @@ const FullScreenVideo = ({ playWithSound }) => {
         animation={`${psychedelicAnimation} 2s infinite linear`}
         fontFamily="'Comic Neue', cursive"
       >
-        study $retardiog
+        study $barking
       </Text>
       <Text
         fontSize={{ base: '10px', md: '8xl' }}

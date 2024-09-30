@@ -40,7 +40,7 @@ const FooterCarousel = () => {
           fontWeight="bold"
           animation={`${epilepticText} 1s infinite`} 
         >
-          $retardiog $retardiog $retardiog $retardiog $retardiog $retardiog $retardiog $retardiog $retardiog $retardiog $retardiog $retardiog $retardiog $retardiog $retardiog $retardiog $retardiog $retardiog $retardiog $retardiog $retardiog $retardiog $retardiog $retardiog $retardiog $retardiog $retardiog $retardiog $retardiog $retardiog $retardiog $retardiog $retardiog $retardiog
+          $barking $barking $barking $barking $barking $barking $barking $barking $barking $barking $barking $barking $barking $barking $barking $barking $barking $barking $barking $barking $barking $barking $barking $barking $barking $barking $barking $barking $barking $barking $barking $barking $barking $barking
         </Text>
       </Box>
     </Box>

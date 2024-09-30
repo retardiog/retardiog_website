@@ -39,7 +39,7 @@ const phrases = [
   "OMG, why does the domain end with .vercel.app?",
   "Retarded Devs",
   "CTO?",
-  "the ticker is $retardiog",
+  "the ticker is $barking",
   "When DEXS update?",
   "Tired of those cringy cute dog memes?",
   "Another rug pull?",

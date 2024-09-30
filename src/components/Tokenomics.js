@@ -79,10 +79,10 @@ const Tokenomics = () => {
         </Box>
         <Box padding="30px 10px 10px" marginTop="30px">
           <Text fontSize="lg" mb={2} fontFamily="'MS Sans Serif', sans-serif">
-            Chain: ETH
+            Chain: SOL
           </Text>
           <Text fontSize="lg" mb={2} fontFamily="'MS Sans Serif', sans-serif">
-            Supply: 185,201,841,507 $retardiog
+            Supply: 1B $barking
           </Text>
           <Text fontSize="lg" mb={2} fontFamily="'MS Sans Serif', sans-serif">
             TAX: 0/0
@@ -101,7 +101,7 @@ const Tokenomics = () => {
         ))}
         {isClosed && (
           <Text fontSize="xl" color="#ff0000" mt={4} fontFamily="'MS Sans Serif', sans-serif">
-            YOU ARE RETARDIOGED!
+            YOU ARE barkingED!
           </Text>
         )}
       </Box>

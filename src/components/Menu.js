@@ -41,23 +41,23 @@ const Menu = ({ toggleMute, isMuted }) => {
       </style>
       <Flex align="center" height="100%">
         <Text ml={8} fontSize="lg" fontWeight="bold" fontFamily="'Space Mono', monospace">
-          $retardiog
+          $barking
         </Text>
         <Spacer />
         <HStack spacing={8} mr={10}>
           <Button onClick={toggleMute} colorScheme="teal">
             {isMuted ? 'Unmute' : 'Mute'}
           </Button>
-          <Link href="https://x.com/retardiog_eth" fontWeight="medium" fontSize="lg" fontFamily="Arial" _hover={{ color: "teal.300" }} target="_blank" rel="noopener noreferrer">
+          <Link href="https://x.com/barking_eth" fontWeight="medium" fontSize="lg" fontFamily="Arial" _hover={{ color: "teal.300" }} target="_blank" rel="noopener noreferrer">
             X
           </Link>
-          <Link href="https://t.me/retardiog" fontWeight="medium" fontSize="md" fontFamily="Courier New" _hover={{ color: "teal.300" }} target="_blank" rel="noopener noreferrer">
+          <Link href="https://t.me/barking" fontWeight="medium" fontSize="md" fontFamily="Courier New" _hover={{ color: "teal.300" }} target="_blank" rel="noopener noreferrer">
             TG
           </Link>
           <Link href="#" fontWeight="medium" fontSize="sm" fontFamily="Georgia" _hover={{ color: "teal.300" }} target="_blank" rel="noopener noreferrer">
             DEXS
           </Link>
-          <Link href="https://github.com/retardiog/retardiog_website" fontWeight="medium" fontSize="sm" fontFamily="Georgia" _hover={{ color: "teal.300" }} target="_blank" rel="noopener noreferrer">
+          <Link href="https://github.com/barking/barking_website" fontWeight="medium" fontSize="sm" fontFamily="Georgia" _hover={{ color: "teal.300" }} target="_blank" rel="noopener noreferrer">
             GitHub
           </Link>
         </HStack>

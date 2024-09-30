@@ -92,7 +92,7 @@ const EntranceModal = ({ onEnter, onExit }) => {
           textAlign="center"
         >
           <ModalHeader mt={15}>
-            Welcome to <span style={{ fontWeight: 'bold', fontSize: '8xl' }}>$retardiog</span>
+            Welcome to <span style={{ fontWeight: 'bold', fontSize: '8xl' }}>$barking</span>
           </ModalHeader>
           <ModalBody pb={10}>
             <Image

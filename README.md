@@ -1,10 +1,10 @@
-# Getting Started with $RETARDIOG
+# Getting Started with $barking
 
-Welcome to the $RETARDIOG repository! This project is designed for any community member who wants to initiate a CTO based on the current website. Dive in and explore how you can contribute and take control!
+Welcome to the $barking repository! This project is designed for any community member who wants to initiate a CTO based on the current website. Dive in and explore how you can contribute and take control!
 
-The essence of $RETARDIOG is simple: Quasi Modo is the antithesis of all those cute dogs and "cabals" that bore everyone, like MISHA, HANA, etc. The core idea of $RETARDIOG is that in the Telegram channel, no one can write, only send voice messages—less messaging, less FUD.
+The essence of $barking is simple: Quasi Modo is the antithesis of all those cute dogs and "cabals" that bore everyone, like MISHA, HANA, etc. The core idea of $barking is that in the Telegram channel, no one can write, only send voice messages—less messaging, less FUD.
 
-$RETARDIOG is a movement.
+$barking is a movement.
 
 ## Installation
 
@@ -24,7 +24,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 You can deploy this project for free on Vercel and link it to any domain you prefer.
 
-Study $RETARDIOG, For The Culture
+Study $barking, For The Culture
 
 
 ## Know Your Meme
