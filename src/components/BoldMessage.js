@@ -28,12 +28,12 @@ const epilepticBackground = keyframes`
 `;
 
 const phrases = [
-  "Is this a Cabal?",
   "Alpha?",
-  "Fuck HANA, MISHA and CO",
+  "Oversized",
+  "EpilEptic Fit",
   "Slow cooking",
   "Quasi Modo Next SHIB",
-  "F**K ALL THOSE CUTE DOGS! FTC",
+  "FTC",
   "Where is dev?",
   "Trenches Sucks",
   "OMG, why does the domain end with .vercel.app?",
@@ -42,8 +42,8 @@ const phrases = [
   "the ticker is $barking",
   "When DEXS update?",
   "Tired of those cringy cute dog memes?",
-  "Another rug pull?",
-  "Just a pump and dump?"
+  "Another rug?",
+  "Dancing"
 ];
 
 

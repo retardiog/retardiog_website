@@ -1,29 +1,18 @@
-import { Box, Text, keyframes, Button } from '@chakra-ui/react';
-import React, { useEffect, useState } from 'react';
+import { Box, Text, Button, keyframes } from '@chakra-ui/react';
+import React, { useState } from 'react';
 
-const psychedelicAnimation = keyframes`
-  0% { color: #ff00ff; }
-  10% { color: #ff0000; }
-  20% { color: #00ff00; }
-  30% { color: #0000ff; }
-  40% { color: #ffff00; }
-  50% { color: #00ffff; }
-  60% { color: #ff00ff; }
-  70% { color: #ff6600; }
-  80% { color: #6600ff; }
-  90% { color: #00ff66; }
-  100% { color: #ff00ff; }
-`;
-
-const gifAnimation = keyframes`
-  0% { opacity: 0.5; }
-  50% { opacity: 1; }
-  100% { opacity: 0.5; }
+// Definimos la animación para el efecto epiléptico
+const epilepticAnimation = keyframes`
+  0% { color: #ff0000; opacity: 1; }
+  25% { color: #00ff00; opacity: 0.8; }
+  50% { color: #0000ff; opacity: 1; }
+  75% { color: #ffff00; opacity: 0.8; }
+  100% { color: #ff00ff; opacity: 1; }
 `;
 
 const FullScreenVideo = ({ playWithSound }) => {
   const [gifVisible, setGifVisible] = useState(Array(20).fill(true));
-  const [positions, setPositions] = useState(Array.from({ length: 20 }, () => ({
+  const [positions] = useState(Array.from({ length: 20 }, () => ({
     top: `${Math.random() * 100}%`,
     left: `${Math.random() * 100}%`,
   })));
@@ -32,28 +21,6 @@ const FullScreenVideo = ({ playWithSound }) => {
     navigator.clipboard.writeText('0xXXXXX');
     alert('CA copied, go check it out on DexScreener barkinged!');
   };
-
-  useEffect(() => {
-    const toggleVisibility = () => {
-      setGifVisible((prev) => prev.map(() => Math.random() > 0.5));
-    };
-
-    const moveGifs = () => {
-      setPositions((prevPositions) =>
-        prevPositions.map(() => ({
-          top: `${Math.random() * 100}%`,
-          left: `${Math.random() * 100}%`,
-        }))
-      );
-    };
-
-    const interval = setInterval(() => {
-      toggleVisibility();
-      moveGifs();
-    }, 1000);
-
-    return () => clearInterval(interval);
-  }, []);
 
   const gifSources = ['/quasi.png', '/quasi2.png', '/quasi3.png', '/quasi4.png'];
 
@@ -82,21 +49,9 @@ const FullScreenVideo = ({ playWithSound }) => {
           zIndex: '0',
         }}
       >
-        <source src="/barking3.mp4" type="video/mp4" />
+        <source src="/wonder.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
-
-      <Box
-        position="absolute"
-        top={0}
-        left={0}
-        width="100%"
-        height="100%"
-        backgroundImage="url('/psycho2.gif')"
-        backgroundSize="cover"
-        opacity={0.18}
-        zIndex="1"
-      />
 
       <Box
         position="absolute"
@@ -112,15 +67,12 @@ const FullScreenVideo = ({ playWithSound }) => {
               key={index}
               src={gifSources[index % gifSources.length]}
               alt=""
-              className="dancing-gif"
               style={{
-                width: `${Math.random() * (window.innerWidth < 768 ? 200 : 600) + 100}px`,
+                width: '150px',
                 height: 'auto',
                 position: 'absolute',
                 top: position.top,
                 left: position.left,
-                animation: `${gifAnimation} 1s infinite`,
-                transform: `rotate(${Math.random() * 10 - 5}deg)`
               }}
             />
           )
@@ -128,13 +80,13 @@ const FullScreenVideo = ({ playWithSound }) => {
       </Box>
 
       <Text
-  fontSize="60px"
-          textAlign="center"
+        fontSize="60px"
+        textAlign="center"
         zIndex="2"
         bg="rgba(0, 0, 0, 0.5)"
         p={1}
         borderRadius="md"
-        animation={`${psychedelicAnimation} 2s infinite linear`}
+        animation={`${epilepticAnimation} 0.5s infinite`}
         fontFamily="'Comic Neue', cursive"
       >
         Meet Quasimodo
@@ -146,22 +98,22 @@ const FullScreenVideo = ({ playWithSound }) => {
         bg="rgba(0, 0, 0, 0.5)"
         p={1}
         borderRadius="md"
-        animation={`${psychedelicAnimation} 2s infinite linear`}
+        color="white"
         fontFamily="'Comic Neue', cursive"
       >
-        study $barking
+        Study $barking
       </Text>
       <Text
         fontSize={{ base: '10px', md: '8xl' }}
         textAlign="center"
         zIndex="2"
-        color={'white'}
+        color="white"
         bg="rgba(0, 0, 0, 0.5)"
         p={4}
         borderRadius="md"
         fontFamily="'Comic Neue', cursive"
       >
-        CA: 0xXXXX
+        CA: pump
       </Text>
       <Button onClick={copyCA} colorScheme="teal" mt={4} zIndex="2">
         Copy CA
